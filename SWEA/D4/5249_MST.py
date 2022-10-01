@@ -21,7 +21,6 @@ for t in range(T):
         lst.append(z)
     lst.sort()
     arr=['0']*(k+1)
-
     answer=0
     cnt=0
     for i in lst:
