@@ -23,7 +23,6 @@ def bfs(y,x):
                 li[dy][dx]=temp
                 q.append((dy,dx))
 
-
 from collections import deque
 T=int(input())
 for t in range(T):
