@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77e9ae37-1e07-4c51-9e3e-7a5fe72749e4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../BAEKJOON/python/최소스패닝트리/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../BAEKJOON/python/최소스패닝트리/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../최단 경로/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../최단 경로/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,10 +38,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../위상 정렬" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../서로소" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.최소신장트리_도시분할계획">
+  <component name="RunManager" selected="Python.main">
     <configuration name="최소신장트리_크로스칼알고리즘" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="최소 신장 트리" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,13 +106,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.main" />
       <item itemvalue="Python.최소신장트리_크로스칼알고리즘" />
-      <item itemvalue="Python.최소신장트리_도시분할계획" />
+      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.최소신장트리_도시분할계획" />
         <item itemvalue="Python.최소신장트리_크로스칼알고리즘" />
       </list>
     </recent_temporary>
