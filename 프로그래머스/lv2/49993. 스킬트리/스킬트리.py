@@ -5,7 +5,6 @@ def solution(skill, skill_trees):
         result = 0
         for sk in skill_tree:
             if sk in skill:
-                print(skill[cnt], sk)
                 if skill[cnt]!=sk:
                     result = -1
                     break
