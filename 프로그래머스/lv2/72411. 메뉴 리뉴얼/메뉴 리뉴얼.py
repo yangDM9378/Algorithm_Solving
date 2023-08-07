@@ -5,8 +5,7 @@ def solution(orders, course):
         course_orders = []
         order_dic={}
         for order in orders:
-            order=list(order)
-            order.sort()
+            order=sorted(order)
             combination=list(combinations(order,i))
             for com in combination:
                 course_orders.append(com)
