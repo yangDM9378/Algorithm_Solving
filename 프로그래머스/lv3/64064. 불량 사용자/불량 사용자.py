@@ -1,4 +1,5 @@
 from copy import deepcopy
+from itertools import product
 def check_id(uid, ban_id):
     for i in range(len(uid)):
         if ban_id[i]=='*':continue
@@ -9,10 +10,9 @@ def check_id(uid, ban_id):
 def dfs(level, banned_id, arr):
     global result, results,dic
     if level == len(banned_id):
-        if len(set(result)) == len(banned_id):
-            sort_result = sorted(result)
-            if sort_result not in results:
-                results.append(deepcopy(sort_result))
+        sort_result = sorted(result)
+        if sort_result not in results:
+            results.append(deepcopy(sort_result))
         return 
         
     for i in arr[level]:
@@ -40,5 +40,11 @@ def solution(user_id, banned_id):
                     arr[idx].append(uid)
                     dic[uid]=0
     print(dic)
-    dfs(0, banned_id, arr)
+    a=list(product(*arr))
+    for i in a:
+        if len(set(i)) == len(banned_id):
+            if sorted(i) not in results:
+                results.append(sorted(i))
+    print(results)
+    # dfs(0, banned_id, arr)
     return len(results)
