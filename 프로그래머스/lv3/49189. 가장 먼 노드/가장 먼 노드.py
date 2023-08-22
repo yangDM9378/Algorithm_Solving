@@ -6,7 +6,7 @@ def dijkstra(start):
     while q:
         dist, now = heapq.heappop(q)
         if distance[now] <dist:continue
-        
+
         for i in arr[now]:
             cost  = dist + i[1]
             if cost <distance[i[0]]:
@@ -21,6 +21,5 @@ def solution(n, edge):
         arr[a].append((b,1))
         arr[b].append((a,1))
     dijkstra(1)
-    print(distance)
     answer = distance.count(max(distance[1:]))
     return answer
