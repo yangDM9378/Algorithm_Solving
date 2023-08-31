@@ -14,9 +14,9 @@ def solution(board):
             dx=x+direct[1]
             if dy<0 or dx<0 or dy>n-1 or dx>n-1:continue
             if board[dy][dx]!=0:continue
-            new_money=money+1
+            new_money=money+100
             if state != direct[2]:
-                new_money=new_money+5
+                new_money=new_money+500
             if used[direct[2]][dy][dx]>new_money:
                 used[direct[2]][dy][dx]=new_money
                 if dy==n-1 and dx==n-1:continue
@@ -24,4 +24,4 @@ def solution(board):
     result =21e8
     for i in range(4):
         result = min([result, used[i][n-1][n-1]])
-    return result*100
+    return result
