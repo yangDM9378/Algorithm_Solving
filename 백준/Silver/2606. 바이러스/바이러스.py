@@ -3,8 +3,8 @@ def dfs(start):
     used[start]=1
     for i in arr[start]:
         if used[i]==1:continue
-        dfs(i)
         cnt+=1
+        dfs(i)
 
 n=int(input())
 t=int(input())
