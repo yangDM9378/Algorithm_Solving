@@ -1,19 +1,18 @@
-from collections import Counter
-N,M = map(int, input().split())
+import sys
 
-words=[]
-dict_cnt_words = {}
-for _ in range(N):
-    word = input()
-    if M < len(word)+1:
-        words.append(word)
-most_sort_words = Counter(words).most_common()
-for word, cnt in most_sort_words:
-    dict_cnt_words[cnt] = dict_cnt_words.get(cnt, [])
-    dict_cnt_words[cnt].append(word)
+n, m = map(int, sys.stdin.readline().split())
+word_set = {}
 
+for _ in range(n):
+    word = sys.stdin.readline().strip()
 
-for len_sort_word in dict_cnt_words.values():
-    len_sort_word.sort(lambda x:(-len(x),x))
-    for result in len_sort_word:
-        print(result)
+    if len(word) >= m:
+        if word in word_set:
+            word_set[word] += 1
+        else:
+            word_set[word] = 1
+
+word_dict = sorted(word_set.items(),key=lambda x:(-x[1],-len(x[0]),x[0]))
+
+for word in word_dict:
+    print(word[0])
