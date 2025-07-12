@@ -12,15 +12,11 @@ def solution(players, m, k):
             else:
                 server_list.appendleft([end_time, end_server_num])
         player = players[i]
-        print(f'{i}, player는 {player}명, 현재 서버 갯수 {server_num}')
         if player < (server_num)*m:continue
         need_server_num = math.ceil((player+1)/m)
         add_server_num = need_server_num - server_num
         server_num += add_server_num
-        print(f'server, {add_server_num} 대 증설')
         server_end = [i+k-1, add_server_num]
         server_list.append(server_end)
         answer += add_server_num
-        
-
     return answer
