@@ -1,21 +1,19 @@
 from collections import deque
-def solution(priorities, location):
-    answer = 0
-    sorted_priorities = sorted(priorities, reverse=True)
-    q = deque()
-    sq = deque(sorted_priorities)
-    for i in range(len(priorities)):
-        q.append([i,priorities[i]])
+import heapq
 
-    while sq:
-        val = sq.popleft()
-        while q:
-            idx, priority = q.popleft()
-            if val == priority:
-                answer+=1
-                break
-            else:
-                q.append([idx, priority])
-        if location == idx:
-            break
-    return answer
+def solution(priorities, location):
+    queue = deque([(i, p) for i, p in enumerate(priorities)])
+    max_heap = [-p for p in priorities]
+    heapq.heapify(max_heap)
+
+    order = 0
+    while queue:
+        idx, priority = queue.popleft()
+        
+        if priority == -max_heap[0]:
+            heapq.heappop(max_heap)
+            order += 1
+            if idx == location:
+                return order
+        else:
+            queue.append((idx, priority)) 
