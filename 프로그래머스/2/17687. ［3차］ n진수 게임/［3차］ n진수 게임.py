@@ -10,7 +10,7 @@ def solution(n, t, m, p):
     num = 0
     answer = "0"
     result = ""
-    while (len(answer) < (t+1)*m):
+    while (len(answer) < t*m):
         convert_val = convert_num(n, num)
         answer += convert_val
         num += 1
